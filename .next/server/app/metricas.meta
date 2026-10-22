@@ -1,0 +1,34 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/metricas/layout,_N_T_/metricas/page,_N_T_/metricas"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/metricas/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 64,
+    "slots": {
+      "children": {
+        "hints": 96,
+        "slots": {
+          "children": {
+            "hints": 160,
+            "slots": null
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/ca174a8288ec6b3f822f982e1971e3af132374d9add5425bcf3e6bd2d81b7a6f/$/metricas",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/metricas/page"
+    },
+    "isFallback": false
+  }
+}

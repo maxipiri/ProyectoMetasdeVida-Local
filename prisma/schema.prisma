@@ -1,0 +1,67 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Pillar {
+  id                String    @id @default(uuid())
+  name              String
+  description       String?
+  color             String    // Hex or Tailwind color class (e.g. "#3B82F6")
+  icon              String    // Lucide icon name (e.g. "briefcase", "heart")
+  targetWeeklyHours Float     @default(10)
+  targetPercentage  Float?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  tasks             Task[]
+  timeLogs          TimeLog[]
+}
+
+model Task {
+  id             String    @id @default(uuid())
+  title          String
+  description    String?
+  pillarId       String
+  pillar         Pillar    @relation(fields: [pillarId], references: [id], onDelete: Cascade)
+  date           DateTime  // Scheduled date
+  startTime      String?   // "HH:mm" format for timeblocking
+  plannedMinutes Int       @default(30)
+  actualMinutes  Int       @default(0)
+  status         String    @default("PENDING") // PENDING, IN_PROGRESS, COMPLETED, CANCELLED
+  priority       String    @default("MEDIUM")  // LOW, MEDIUM, HIGH, URGENT
+  subtasks       Subtask[]
+  timeLogs       TimeLog[]
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model Subtask {
+  id        String   @id @default(uuid())
+  taskId    String
+  task      Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  title     String
+  completed Boolean  @default(false)
+  order     Int      @default(0)
+}
+
+model TimeLog {
+  id       String   @id @default(uuid())
+  taskId   String?
+  task     Task?    @relation(fields: [taskId], references: [id], onDelete: SetNull)
+  pillarId String
+  pillar   Pillar   @relation(fields: [pillarId], references: [id], onDelete: Cascade)
+  minutes  Int
+  date     DateTime @default(now())
+  notes    String?
+}
+
+model ChatMessage {
+  id        String   @id @default(uuid())
+  role      String   // "user" | "assistant" | "system"
+  content   String
+  createdAt DateTime @default(now())
+}

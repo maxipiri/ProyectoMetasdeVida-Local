@@ -1,0 +1,15 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/chat/route": "app/api/chat/route.js",
+  "/api/metrics/route": "app/api/metrics/route.js",
+  "/api/pillars/route": "app/api/pillars/route.js",
+  "/api/subtasks/route": "app/api/subtasks/route.js",
+  "/api/tasks/[id]/route": "app/api/tasks/[id]/route.js",
+  "/api/tasks/route": "app/api/tasks/route.js",
+  "/api/timelogs/route": "app/api/timelogs/route.js",
+  "/metricas/page": "app/metricas/page.js",
+  "/page": "app/page.js",
+  "/pilares/page": "app/pilares/page.js",
+  "/tareas/page": "app/tareas/page.js"
+}

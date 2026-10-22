@@ -1,0 +1,34 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/pilares/layout,_N_T_/pilares/page,_N_T_/pilares"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/pilares/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 64,
+    "slots": {
+      "children": {
+        "hints": 96,
+        "slots": {
+          "children": {
+            "hints": 160,
+            "slots": null
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/2479b15eb37c09a85dc9d1bf6129ec92916793143bef84adbc1dd7ef0e3ebba5/$/pilares",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/pilares/page"
+    },
+    "isFallback": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/chat/route": "/api/chat",
+  "/api/metrics/route": "/api/metrics",
+  "/api/pillars/route": "/api/pillars",
+  "/api/subtasks/route": "/api/subtasks",
+  "/api/tasks/[id]/route": "/api/tasks/[id]",
+  "/api/tasks/route": "/api/tasks",
+  "/api/timelogs/route": "/api/timelogs",
+  "/metricas/page": "/metricas",
+  "/page": "/",
+  "/pilares/page": "/pilares",
+  "/tareas/page": "/tareas"
+}
